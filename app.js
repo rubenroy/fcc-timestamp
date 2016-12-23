@@ -6,10 +6,6 @@ var monthNames = [
   "August", "September", "October",
   "November", "December"
 ];
-function isValidDate(date) {
-	date_str = (new Date(date)).toString();
-	return date_str === 'Invalid Date';
-}
 
 app.get('/', function (req, res) {
   res.send("Index Page");
