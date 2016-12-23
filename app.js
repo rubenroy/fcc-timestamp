@@ -9,7 +9,7 @@ var monthNames = [
 var port = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
-  res.send("Index Page");
+    res.sendfile('views/index.html', {root: __dirname })
 })
 
 app.get('/:input', function (req, res) {
