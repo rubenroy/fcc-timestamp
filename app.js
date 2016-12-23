@@ -6,6 +6,7 @@ var monthNames = [
   "August", "September", "October",
   "November", "December"
 ];
+var port = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
   res.send("Index Page");
@@ -31,6 +32,6 @@ app.get('/:input', function (req, res) {
 	}
 })
 
-app.listen(config.port, function () {
-    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+app.listen(port, function () {
+    console.log('Express server listening on port %d', port);
 })
